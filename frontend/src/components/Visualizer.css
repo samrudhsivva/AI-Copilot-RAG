@@ -1,0 +1,43 @@
+/* Visualizer.css */
+.visualizer-container {
+    background-color: #1f2937;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    margin-top: 1.5rem;
+  }
+  
+  .visualizer-header {
+    font-size: 20px;  /* Larger heading */
+    color: #e5e7eb;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .chart-wrapper {
+    width: 50%;
+    height: 200px; /* Increased height for charts */
+  }
+  .visual-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: white;
+    color: black;
+  }
+  
+  .visual-table th, .visual-table td {
+    border: 1px solid #d1d5db;
+    padding: 8px 12px;
+    text-align: left;
+  }
+  
+  .visual-table th {
+    background-color: #f3f4f6;
+    font-weight: 600;
+  }
+  
+  .visual-table tr:nth-child(even) {
+    background-color: #f9fafb;
+  }
+  

@@ -1,0 +1,63 @@
+.widget-sidebar {
+  width: 260px;
+  background: linear-gradient(to bottom, #0f172a, #1f2937);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #334155;
+  height: 100vh;
+  overflow-y: auto;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.widget-title {
+  color: #00b4d8; /* Robotic blue */
+  font-size: 16px;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.widget-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.widget-entry {
+  background: linear-gradient(to right, #1e293b, #334155);
+  border: 1px solid #3b82f6;
+  color: #e0f2fe;
+  text-align: left;
+  cursor: pointer;
+  padding: 10px 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.widget-entry:hover {
+  background: linear-gradient(to right, #2563eb, #1e40af);
+  color: #ffffff;
+  transform: scale(1.03);
+}
+
+.widget-icon {
+  font-size: 18px;
+  color: #38bdf8;
+}
+
+.widget-label {
+  font-size: 13px;
+  color: #cbd5e1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 160px;
+}

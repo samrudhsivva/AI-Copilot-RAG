@@ -1,0 +1,17 @@
+Pie Chart:
+Give me richest people in World.
+
+Bar graph:
+Show GDP growth trends over the past 10 years
+
+Table:
+Show me the monthly salary expenses for the past year.
+
+Clinical:
+Provide all sites for Heart Attack.
+
+Food Security Agent
+"How can social protection programs help reduce hunger and improve nutrition?"
+
+Web UI:
+Show GDP growth trends over the past 10 years

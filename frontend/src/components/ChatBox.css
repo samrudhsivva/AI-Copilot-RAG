@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+}
+
+.main-layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* 📊 Chart Visual */
+.chart-area {
+  height: 250px;
+  width: 550px;
+}
+.chat-title {
+  font-size: 28px;
+  font-weight: bold;
+  background: linear-gradient(to right, #3b82f6, #9333ea);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+}
+
+.chat-response-block {
+  background-color: rgba(255, 255, 255, 0.04);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #334155;
+}
+
+/* 💬 Middle Chatbox */
+.chatbox-container {
+  flex: 1;
+  padding: 1rem;
+  background-color: #0f172a;
+  color: white;
+  overflow-y: auto;
+  min-width: 0;
+}
+
+/* 📜 Right Sidebar */
+.right-history-panel {
+  width: 280px;
+  background-color: #ffffff;
+  border-left: 1px solid #e5e7eb;
+  padding: 1rem;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+/* ✅ Formatted Gemini Response Block */
+.formatted-response {
+  font-size: 16px;
+  line-height: 1.7;
+  background-color: rgba(255, 255, 255, 0.07);
+  padding: 18px;
+  border-radius: 10px;
+  color: #f3f4f6;
+  margin-bottom: 12px;
+  white-space: normal;
+  word-break: break-word;
+}
+
+/* 🧩 Headers */
+.formatted-response h1 {
+  font-size: 22px;
+  color: #93c5fd;
+  margin-bottom: 10px;
+}
+.formatted-response h2 {
+  font-size: 20px;
+  color: #60a5fa;
+  margin-bottom: 8px;
+}
+.formatted-response h3 {
+  font-size: 18px;
+  color: #38bdf8;
+  margin-bottom: 6px;
+}
+
+/* 📋 Lists */
+.formatted-response ul,
+.formatted-response ol {
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+
+.formatted-response li {
+  margin-bottom: 6px;
+}
+
+/* 🔗 Bold */
+.formatted-response strong {
+  color: #00b4d8;
+}
+
+/* 🧼 Optional cleanup spacing */
+.formatted-response p {
+  margin-bottom: 10px;
+}
+
+
+.icon-button {
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  border: none;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.icon-button:hover {
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 4px 12px rgba(147, 51, 234, 0.4);
+}
+
+.back-to-chat-button {
+  background: linear-gradient(to right, #1e293b, #334155);
+  color: #00b4d8; /* Robotic blue */
+  border: 1px solid #475569;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.back-to-chat-button:hover {
+  background: #1e293b;
+  color: #38bdf8; /* Slightly brighter on hover */
+}
+
+
+
+.chatbox-input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #1e293b;
+  color: #f8fafc;
+  outline: none;
+  transition: box-shadow 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+.chatbox-input:focus {
+  box-shadow: 0 0 0 2px #60a5fa;
+}
+
+
+.button-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.button-row button {
+  background: linear-gradient(135deg, #0ea5e9, #3b82f6);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s ease;
+}
+
+.button-row button:hover {
+  background: linear-gradient(135deg, #38bdf8, #60a5fa);
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* 💬 Floating Chat Bubbles */
+.chat-bubble {
+  max-width: 75%;
+  padding: 12px 16px;
+  border-radius: 18px;
+  margin: 8px 0;
+  line-height: 1.6;
+  font-size: 15px;
+  word-wrap: break-word;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.chat-bubble.user {
+  align-self: flex-end;
+  background: linear-gradient(145deg, #007bff, #00c3ff);
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+
+.chat-bubble.ai {
+  align-self: flex-start;
+  background: #1f2937;
+  color: #f3f4f6;
+  border-bottom-left-radius: 4px;
+}
+
+/* ⏳ Typing Animation */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 12px;
+}
+
+.typing-indicator span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #60a5fa;
+  border-radius: 50%;
+  animation: bounce 1.2s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
+  40% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

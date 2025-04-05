@@ -1,0 +1,21 @@
+/* FeedbackButtons.css */
+.feedback-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .feedback-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 28px;  /* Larger thumbs icons */
+    color: #e5e7eb;
+    transition: color 0.3s ease;
+  }
+  
+  .feedback-buttons button:hover {
+    color: #fbbf24;
+  }
+  

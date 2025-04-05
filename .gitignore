@@ -1,0 +1,14 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore virtualenvs
+venv/
+backend/venv/
+frontend/node_modules/
+
+# Ignore heavy data files
+backend/data/
+*.pdf
+*.zip
+*.wav
