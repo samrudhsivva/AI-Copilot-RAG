@@ -18,7 +18,7 @@ def get_rag_chain(pdf_path):
     embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     vectorstore = FAISS.from_documents(pages, embeddings)
 
-    llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro", google_api_key="AIzaSyDnHim4Gpw1yIIobICu_yA4DXT3hE-bLSo") # or "gemini-1.5-pro"
+    llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro", google_api_key="") # or "gemini-1.5-pro"
     retriever = vectorstore.as_retriever()
 
     qa = RetrievalQA.from_chain_type(llm=llm, retriever=retriever)
