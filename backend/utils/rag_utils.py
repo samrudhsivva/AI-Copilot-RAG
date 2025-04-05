@@ -9,7 +9,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 import os
 
 # ✅ Set Gemini API Key here
-genai.configure(api_key="AIzaSyDnHim4Gpw1yIIobICu_yA4DXT3hE-bLSo")  # 🔁 Replace with your key
+genai.configure(api_key="")  # 🔁 Replace with your key
 
 def get_rag_chain(pdf_path):
     loader = PyPDFLoader(pdf_path)
